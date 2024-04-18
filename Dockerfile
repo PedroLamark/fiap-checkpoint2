@@ -12,7 +12,7 @@ FROM eclipse-temurin:18-jre-alpine
 
 RUN mkdir /opt/app
 
-COPY --from=build  /opt/app/target/app.jar /opt/app/app.jar
+COPY --from=build /opt/app/target/*.jar /opt/app/app.jar
 
 WORKDIR /opt/app
 
